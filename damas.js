@@ -60,21 +60,15 @@ $(document).ready(function() {
 						if((row_drop - 2) == row) {
 							col_previus = (col > col_drop) ? col_drop + 1 : col_drop - 1;
 							div_id = 'row-' + (row_drop - 1) + "-col-" + col_previus;
-							return ($("#"+div_id).children().hasClass("ficha2") && ! $(this).children().length > 0 ) ? true : false;
+							return ($("#"+div_id).children().hasClass("ficha2") && ! $(this).children().length > 0 );
 						}
-						/*if((row_drop - 1) == row && (col_drop -1 == col || col_drop + 1 == col)) {
-							return (! $(this).children().length > 0 );
-						}*/
 						return ((row_drop - 1) == row && (col_drop -1 == col || col_drop + 1 == col) && (! $(this).children().length > 0 ));
 					} else {
 						if((row_drop + 2) == row) {
 							col_previus = (col > col_drop) ? col_drop + 1 : col_drop - 1;
 							div_id = 'row-' + (row_drop + 1) + "-col-" + col_previus;
-							return ($("#"+div_id).children().hasClass("ficha1")) ? true : false;
+							return ($("#"+div_id).children().hasClass("ficha1") && ! $(this).children().length > 0 );
 						}
-						/*if((row_drop + 1) == row && (col_drop -1 == col || col_drop + 1 == col)) {
-							return (! $(this).children().length > 0 );
-						}*/
 						return ((row_drop + 1) == row && (col_drop -1 == col || col_drop + 1 == col) && (! $(this).children().length > 0 ));
 					}
 		    }
